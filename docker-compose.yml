@@ -7,9 +7,9 @@ services:
     restart: unless-stopped
     hostname: unifi-db1
     environment:
-      - MONGO_INITDB_ROOT_USERNAME=admin
-      - MONGO_INITDB_ROOT_PASSWORD=unifiadmin
-      - MONGO_AUTHSOURCE=admin
+      #- MONGO_INITDB_ROOT_USERNAME=admin
+      #- MONGO_INITDB_ROOT_PASSWORD=unifiadmin
+      #- MONGO_AUTHSOURCE=admin
       - MONGO_USER=unifi
       - MONGO_PASS=unifi_pass
       - MONGO_DBNAME=unifi
@@ -43,7 +43,7 @@ services:
       - MEM_LIMIT=1024 #optional
       - MEM_STARTUP=1024 #optional
       - MONGO_TLS= #optional
-      - MONGO_AUTHSOURCE=admin
+      #- MONGO_AUTHSOURCE=admin
     volumes:
       - unifi-config:/config
     ports:
