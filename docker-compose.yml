@@ -5,7 +5,7 @@ services:
     container_name: unifi-db1
     restart: unless-stopped
     hostname: unifi-db
-    # environment:
+    environment:
       # MONGO_INITDB_ROOT_USERNAME: root
       # MONGO_INITDB_ROOT_PASSWORD: root
       - MONGO_USER=unifi
