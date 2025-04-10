@@ -5,7 +5,7 @@ services:
     #image: docker.io/mongo:3.6
     container_name: unifi-db1
     restart: unless-stopped
-    hostname: unifi-db
+    hostname: unifi-db1
     environment:
       # MONGO_INITDB_ROOT_USERNAME: root
       # MONGO_INITDB_ROOT_PASSWORD: root
