@@ -10,9 +10,8 @@ services:
       # MONGO_INITDB_ROOT_PASSWORD: root
     volumes:
       - configdb:/data/configdb
-      - configdb:/docker-entrypoint-initdb.d/init-mongo.js:ro
       - datadb:/data/db
-      - init-mongo:/docker-entrypoint-initdb.d/init-mongo.js:ro
+      - ./init-mongo.sh:/docker-entrypoint-initdb.d/init-mongo.sh:ro
     healthcheck:
       # mongodb >= 6.0
       # test: echo 'db.runCommand("ping").ok' | mongosh localhost:27017/test --quiet
@@ -61,4 +60,3 @@ volumes:
   unifi-config: {}
   configdb: {}
   datadb: {}
-  init-mongo: {}
