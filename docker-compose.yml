@@ -1,7 +1,8 @@
 version: "3"
 services:
   unifi-db:
-    image: docker.io/mongo:3.6
+    build: ./test
+    #image: docker.io/mongo:3.6
     container_name: unifi-db1
     restart: unless-stopped
     hostname: unifi-db
