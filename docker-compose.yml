@@ -2,7 +2,7 @@ version: "3"
 services:
   unifi-db:
     image: docker.io/mongo:3.6
-    container_name: unifi-db
+    container_name: unifi-db1
     restart: unless-stopped
     hostname: unifi-db
     # environment:
@@ -24,7 +24,7 @@ services:
       
   unifi-network-application:
     image: lscr.io/linuxserver/unifi-network-application:latest
-    container_name: unifi-82
+    container_name: unifi
     hostname: unifi
     environment:
       - PUID=1000
